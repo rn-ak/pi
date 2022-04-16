@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<title>Hello!</title>
+<link rel="stylesheet" href="style.css">
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6251bb63d87be7bc"></script>
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6251bb63d87be7bc"></script>
+
+
+</head>
+
+    <style>
+        body {
+          background-image: url(https://thumbs.gfycat.com/DimpledSevereBoa-size_restricted.gif);
+          background-size: 100% 350px;
+          background-repeat: no-repeat;
+          background-position: 0% 3px;
+          font-family: sans-serif;
+          background-color: #ffffff;
+}
+.file-upload {
+    padding: 10% 3%;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: solid 1.5px #f6f7fa;
+    background-color: #f6f7fa;
+}
+
+.file-upload-btn {
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  background: #1FB264;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #15824B;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.file-upload-btn:hover {
+  background: #1AA059;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.image-upload-wrap {
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    object-fit: contain;
+    border-radius: 10px;
+    border: dashed 1.5px #35465d;
+    background-color: #ffffff;
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+    background-color: #35465d82;
+    border: 1.5px dashed #ffffff;
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #222;
+  margin-top: 10px;
+}
+
+.drag-text {
+  text-align: center;
+}
+
+.drag-text h3 {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.file-upload-image {
+  max-height: 200px;
+  max-width: 200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.remove-image {
+  width: 200px;
+  margin: 0;
+  color: #fff;
+  background: #cd4535;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #b02818;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.remove-image:hover {
+  background: #c13b2a;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.nav-distance {
+    padding: 2.1% 7.7%;
+}
+
+.navbar-light .navbar-brand {
+  font-family: NanumSquareR;
+  line-height: 1.68;
+  text-align: left;
+  color: #35465d; 
+}
+
+.navbar-light .navbar-toggler {
+    border-color: #ffffff;
+}
+
+.section {
+    margin-top: 150px;
+}
+
+.title {
+  font-family: NanumSquareR;
+  line-height: 1.67;
+  text-align: center;
+  color: #35465d;
+}
+
+.subtitle {
+  font-family: NanumSquareR;
+  line-height: 1.53;
+  text-align: center;
+  color: #2a599b;
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+    .navbar-brand {
+        font-size: 2rem;
+    }
+}
+
+.upload {
+    width: 20%;
+}
+
+.upload-text {
+    width: 58%;
+    font-family: NanumSquareR;
+    font-size: 1.5rem;
+    line-height: 1.53;
+    text-align: center;
+    color: #35465d;
+    margin: 0 auto;
+}
+
+.select-language{
+  color: #ffffff;
+  margin-top: 50px;
+}
+
+.right-items{
+  color: rgb(255, 255, 255);
+  margin-top: 10px;
+  text-align: right;
+}
+    </style>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Fish</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://www.raraaqua.co.kr/shop/goods/goods_list.php?&category=018">물고기</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="http://www.prfish.com/shop/goods/goods_list.php?&category=013003">추천상품</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">1:1문의</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <form class="right-items">
+            로그인 <input type="text" value="" title="여기에 id 기입" size="10" placeholder="아이디 기입" name="id">
+            <input type="password" size="10" title="pw입력" placeholder="비밀번호 기입"name="pwd">
+            검색 <input type="text" name="search">
+            <input type="submit">
+          </form>
+
+          <section class="container d-flex flex-column justify-content-center align-items-center">
+            <h2 class="select-language">Language</h2>
+            <select onchange="changeLanguage(this)" class="custom-select col-8">
+                <option value="ko" lang="ko">한국어</option>
+                <option value="en" lang="en">English</option>
+                <option value="ja" lang="ja">日本語</option>
+                <option value="zh" lang="zh">中文</option>
+            </select>
+        </section>
+      
+          <section class="section">
+              <h1 class="title">초보자 추천 애완물고기에 대해 알아보기</h1>
+              <h3 class="subtitle">내가 본 물고기는 어떤 종일까?</h3>
+              
+          </section>
+        <a class="navbar-brand" href="#"> </a>
+
+        <script
+            class="jsbin"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+        ></script>
+        <div class="container file-upload">
+            <div class="image-upload-wrap">
+                <input
+                    class="file-upload-input"
+                    type="file"
+                    onchange="readURL(this);"
+                    accept="image/*"
+                />
+                <div class="drag-text">
+                    <img src="data:image/png;base64,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" class="mt-5 pt-5 upload" />
+                    <h3 class="mb-5 pb-5 pt-4 upload-text">
+                        궁금한 애완 물고기 사진을 올려주세요
+                    </h3>
+                </div>
+            </div>
+            <div class="file-upload-content">
+                <img class="file-upload-image" id="fish-image" src="#" alt="your image" />
+                <p class="result-message"></p>
+                <div id="label-container"></div>
+                <div class="image-title-wrap">
+                    <button type="button" onclick="removeUpload()" class="btn btn-primary btn-sm">
+                        다른 사진으로 시도하기
+                    </button>
+                </div>
+                
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox"></div>
+            
+            </div>
+            <div class="d-flex justify-content-center">
+              <a href="https://youtu.be/MS2YD97Y8Dc">물고기를 처음 키우는 당신에게 추천하는 영상  .</a>
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQruXZxfWptyN1I32keSqlyOfANGzOAZnQMVw&usqp=CAU" width=60/>
+            </div>
+        </div>
+        <div id="webcam-container"></div>
+        <div id="disqus_thread"></div>
+
+        
+<script>
+   
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://dkfoiding.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+        
+        <body>
+
+        <script>
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('.image-upload-wrap').hide();
+                        $('.file-upload-image').attr('src', e.target.result);
+                        $('.file-upload-content').show();
+                        $('.image-title').html(input.files[0].name);
+                    };
+                    reader.readAsDataURL(input.files[0]);
+                    init().then(function(){
+                        console.log("확인");
+                        predict()
+                    })
+                    
+                } else {
+                    removeUpload();
+                }
+            }
+
+            function removeUpload() {
+                $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+                $('.file-upload-content').hide();
+                $('.image-upload-wrap').show();
+            }
+            $('.image-upload-wrap').bind('dragover', function () {
+                $('.image-upload-wrap').addClass('image-dropping');
+            });
+            $('.image-upload-wrap').bind('dragleave', function () {
+                $('.image-upload-wrap').removeClass('image-dropping');
+            });
+        </script>
+
+        <script type="text/javascript">
+           
+            const URL = './my_model2/';
+
+            let model, webcam, labelContainer, maxPredictions;
+
+            async function init() {
+                const modelURL = URL + 'model.json';
+                const metadataURL = URL + 'metadata.json';
+
+                model = await tmImage.load(modelURL, metadataURL);
+                maxPredictions = model.getTotalClasses();
+
+                // append elements to the DOM
+                labelContainer = document.getElementById('label-container');
+                for (let i = 0; i < maxPredictions; i++) {
+                    // and class labels
+                    labelContainer.appendChild(document.createElement('div'));
+                }
+            }
+
+            async function predict() {
+                var image = document.getElementById("fish-image")
+                const prediction = await model.predict(image, false);
+                prediction.sort((a,b) => parseFloat(b.probability) - parseFloat(a.probability));
+                console.log(prediction[0].className);
+                  var resultMassege, text_1, text_2, text_3;
+                  switch(prediction[0].className) {
+                    case "구피":
+                      resultMassege = "해당 물고기는 '구피'입니다."
+                      text_1 = "길이 3~4cm의 난태생송사리과의 기수성 열대어입니다."
+                      text_2 = "구피 적정 수온은 22~28도 사이로 가장 인기 있는 애완물고기입니다."
+                        break;
+                    case "베타":
+                        resultMassege = "해당 물고기는 '베타'입니다"
+                        text_1 = "베타는 캄보디아, 라오스, 미얀마 등의 동남아시아에서 사는 민물고기입니다."
+                        text_2 = "베타 적정 수온은 25~27도 사이로 생명력이 강한 애완물고기입니다."
+                        break;
+                    case "코리도라스":
+                        resultMassege = "해당 물고기는 '코리도라스'입니다"
+                        text_1 = "아마존 강 및 남미를 대표하는 열대어 중 하나로 6.5cm ~ 7cm 길이의 물고기입니다."
+                        text_2 = "코리도라스 적정 수온은 22~ 24도 사이로 온순한 애완물고기입니다."
+                        break;
+                    case "금붕어":
+                        resultMassege = "해당 물고기는 '금붕어'입니다"
+                        text_1 = "잉어목 잉어과의 민물고기 중 붕어의 품종입니다."
+                        text_2 = "금붕어 적정 수온은 20~25도 사이로 사육난이도가 높아 중급자 이상에게 추천합니다."
+                        break;
+                    case "엔젤피쉬":
+                        resultMassege = "해당 물고기는 '엔젤피쉬'입니다"
+                        text_1 = "농어목 시클리드과의 프테로필룸속에 속하는 어류, 아마존 강에 주로 분포합니다"
+                        text_2 = "엔젤피쉬 적정 수온은 24~27도 사이로 높은 수질 적응력이 특징입니다."
+                        break;
+                    case "안시":
+                        resultMassege = "해당 물고기는 '안시'입니다"
+                        text_1 = "메기목 로리카리아과에 속한 담수성 대형 열대어입니다"
+                        text_2 = "안시 적정 수온은 26~28도 사이로 이끼를 먹고 사는 청소물고기입니다."
+                        break;
+                    case "비단잉어":
+                        resultMassege = "해당 물고기는 '비단잉어'입니다"
+                        text_1 = "잉어목 잉어과의 어류입니다"
+                        text_2 = "비단잉어 적정 수온은 22~24도 사이로 생명력도 끈질기고 튼튼합니다."
+                        break;
+                    default:
+                        resultMassege = "알수 없습니다"
+                }$('.result-message').html(resultMassege + "<br>" + text_1 + "<br>" + text_2);
+                
+
+                for (let i = 0; i < maxPredictions; i++) {
+                    const classPrediction =
+                        prediction[i].className + ': ' + prediction[i].probability.toFixed(2);
+                    labelContainer.childNodes[i].innerHTML = classPrediction;
+                }
+            }
+        </script>
+    </body>
+</html>
